@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Book Your Unit</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fff8dc; /* Light yellow/beige for a friendly feel */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header {
+    background-color: #ffcc00;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+  header img {
+    max-width: 200px;
+    height: auto;
+    border: 5px solid #ffd700; /* Gold trim around logo */
+    border-radius: 4px;
+  }
+  h1 {
+    margin: 10px 0 0 0;
+  }
+  .container {
+    max-width: 600px;
+    width: 90%;
+    padding: 20px;
+  }
+  .back-link {
+    margin-bottom: 20px;
+  }
+  .back-link a {
+    text-decoration: none;
+    color: #0077cc;
+    font-weight: bold;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #c62828; /* Dark red heading */
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  input, select {
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font-size: 1em;
+  }
+  button {
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 1em;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  button:hover {
+    background-color: #f4b300;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="Rescue Rentals Logo" />
+</header>
+
+<div class="container">
+  <!-- Return to homepage link -->
+  <div class="back-link">
+    <a href="index.html">← Back to Home</a>
+  </div>
+
+  <h2>Book Your Unit</h2>
+
+  <form action="mailto:your-email@example.com" method="POST" enctype="multipart/form-data">
+    <!-- Replace the email above with your actual email or form handler URL -->
+
+    <!-- Date selection -->
+    <label for="date">Select Date:</label>
+    <input type="date" id="date" name="date" required />
+
+    <!-- Unit selection with new options -->
+    <label for="unit">Choose Unit:</label>
+    <select id="unit" name="unit" required>
+      <option value="">--Please select a unit--</option>
+      <option value="Purple Palm Water Slide">Purple Palm Water Slide</option>
+      <option value="Volcano Adventure">Volcano Adventure</option>
+      <option value="Tidal Wave">Tidal Wave</option>
+      <option value="Tropics Double Slide">Tropics Double Slide</option>
+      <option value="Dry Bounce & Combo">Dry Bounce & Combo</option>
+      <!-- New options -->
+      <option value="Inflatable Movie Screen/Projector">Inflatable Movie Screen/Projector</option>
+      <option value="Magic Mirror Photo Booth">Magic Mirror Photo Booth</option>
+    </select>
+
+    <!-- User info -->
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required />
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required />
+
+    <!-- Submit button -->
+    <button type="submit">Send Booking Request</button>
+  </form>
+</div>
+
+</body>
+</html>
